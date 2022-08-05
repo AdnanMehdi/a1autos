@@ -1,10 +1,17 @@
 import React, { Component, useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useHistory, useLocation } from "react-router-dom";
 import Sticky from "react-stickynode";
 import { LocationContext } from "../store/LocationContext";
 
 function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
     const { location, addLocation } = useContext(LocationContext);
+
+    const loc = useLocation();
+    const history = useHistory();
+
+    const navigateHome = () => {
+        history.push("/");
+    };
 
     return (
         <Sticky top={0} innerZ={9999} activeClass="navbar_fixed">
@@ -60,7 +67,6 @@ function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
                                         exact
                                     >
                                         Home
-                                        {location}
                                     </NavLink>
                                     {/* <div className="mega_menu_inner">
               <ul className="dropdown-menu">
@@ -259,14 +265,32 @@ function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
             </div> */}
                                 </li>
 
-                                <li className="nav-item">
-                                    <a href="#process" className="nav-link">
+                                <li className="nav-item" onClick={navigateHome}>
+                                    {/* <Link to="#process" className="nav-link">
+                                        Process
+                                    </Link> */}
+
+                                    <a
+                                        href={
+                                            loc.pathname === "/"
+                                                ? "#process"
+                                                : "/#process"
+                                        }
+                                        className="nav-link"
+                                    >
                                         Process
                                     </a>
                                 </li>
 
-                                <li className="nav-item">
-                                    <a href="#services" className="nav-link">
+                                <li className="nav-item" onClick={navigateHome}>
+                                    <a
+                                        href={
+                                            loc.pathname === "/"
+                                                ? "#services"
+                                                : "/#services"
+                                        }
+                                        className="nav-link"
+                                    >
                                         Services
                                     </a>
                                 </li>
@@ -413,46 +437,17 @@ function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
                                 </ul>
                             </li> */}
                                 <li className="nav-item dropdown submenu">
-                                    <a
-                                        className="nav-link dropdown-toggle"
-                                        href=".#"
-                                        role="button"
-                                        data-toggle="dropdown"
-                                        aria-haspopup="true"
-                                        aria-expanded="false"
+                                    <NavLink
+                                        title="Blogs"
+                                        className="nav-link"
+                                        to="/blog-posts/1"
                                     >
-                                        Blog
-                                    </a>
-                                    <ul className="dropdown-menu">
-                                        <li className="nav-item">
-                                            <NavLink
-                                                to="/Bloglist"
-                                                className="nav-link"
-                                            >
-                                                Blog List
-                                            </NavLink>
-                                        </li>
-                                        <li className="nav-item">
-                                            <NavLink
-                                                to="/BlogGridPage"
-                                                className="nav-link"
-                                            >
-                                                Blog Grid
-                                            </NavLink>
-                                        </li>
-                                        <li className="nav-item">
-                                            <NavLink
-                                                to="/BlogSingle"
-                                                className="nav-link"
-                                            >
-                                                Blog Single
-                                            </NavLink>
-                                        </li>
-                                    </ul>
+                                        Blogs
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
                                     <NavLink
-                                        title="Pricing"
+                                        title="Contact"
                                         className="nav-link"
                                         to="/Contact"
                                     >
@@ -460,6 +455,16 @@ function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
                                     </NavLink>
                                 </li>
                             </ul>
+                            <div>
+                                <a href="tel:0477003385">
+                                    <button
+                                        className={`btn btn_get btn_hover ${hbtnClass} mb-2 mb-md-0`}
+                                        style={{ border: "3px solid #5E2CED" }}
+                                    >
+                                        0477 003 385
+                                    </button>
+                                </a>
+                            </div>
                             <div class="dropdown">
                                 <button
                                     class={`btn btn_get btn_hover dropdown-toggle ${hbtnClass}`}
@@ -476,13 +481,22 @@ function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
                                     aria-labelledby="dropdownMenu2"
                                 >
                                     <button
-                                        class="dropdown-item active"
+                                        class={`dropdown-item ${
+                                            location == "" ? "active" : ""
+                                        }`}
                                         type="button"
+                                        onClick={() => {
+                                            addLocation("");
+                                        }}
                                     >
                                         All Locations
                                     </button>
                                     <button
-                                        class="dropdown-item"
+                                        class={`dropdown-item ${
+                                            location === "Acacia Ridge"
+                                                ? "active"
+                                                : ""
+                                        }`}
                                         type="button"
                                         onClick={() => {
                                             addLocation("Acacia Ridge");
@@ -490,34 +504,134 @@ function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
                                     >
                                         Acacia Ridge
                                     </button>
-                                    <button class="dropdown-item" type="button">
+                                    <button
+                                        class={`dropdown-item ${
+                                            location === "Brisbane"
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        type="button"
+                                        onClick={() => {
+                                            addLocation("Brisbane");
+                                        }}
+                                    >
                                         Birsbane
                                     </button>
-                                    <button class="dropdown-item" type="button">
+                                    <button
+                                        class={`dropdown-item ${
+                                            location === "Beenleigh"
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        type="button"
+                                        onClick={() => {
+                                            addLocation("Beenleigh");
+                                        }}
+                                    >
                                         Beenleigh
                                     </button>
-                                    <button class="dropdown-item" type="button">
+                                    <button
+                                        class={`dropdown-item ${
+                                            location === "Coopers Plains"
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        type="button"
+                                        onClick={() => {
+                                            addLocation("Coopers Plains");
+                                        }}
+                                    >
                                         Coopers Plains
                                     </button>
-                                    <button class="dropdown-item" type="button">
+                                    <button
+                                        class={`dropdown-item ${
+                                            location === "Gold Coast"
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        type="button"
+                                        onClick={() => {
+                                            addLocation("Gold Coast");
+                                        }}
+                                    >
                                         Gold Coast
                                     </button>
-                                    <button class="dropdown-item" type="button">
+                                    <button
+                                        class={`dropdown-item ${
+                                            location === "Ipswich"
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        type="button"
+                                        onClick={() => {
+                                            addLocation("Ipswich");
+                                        }}
+                                    >
                                         Ipswich
                                     </button>
-                                    <button class="dropdown-item" type="button">
+                                    <button
+                                        class={`dropdown-item ${
+                                            location === "Rocklea"
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        type="button"
+                                        onClick={() => {
+                                            addLocation("Rocklea");
+                                        }}
+                                    >
                                         Rocklea
                                     </button>
-                                    <button class="dropdown-item" type="button">
+                                    <button
+                                        class={`dropdown-item ${
+                                            location === "Sunnybank"
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        type="button"
+                                        onClick={() => {
+                                            addLocation("Sunnybank");
+                                        }}
+                                    >
                                         Sunnybank
                                     </button>
-                                    <button class="dropdown-item" type="button">
+                                    <button
+                                        class={`dropdown-item ${
+                                            location === "Toowoomba"
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        type="button"
+                                        onClick={() => {
+                                            addLocation("Toowoomba");
+                                        }}
+                                    >
                                         Toowoomba
                                     </button>
-                                    <button class="dropdown-item" type="button">
+                                    <button
+                                        class={`dropdown-item ${
+                                            location === "Underwood"
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        type="button"
+                                        onClick={() => {
+                                            addLocation("Underwood");
+                                        }}
+                                    >
                                         Underwood
                                     </button>
-                                    <button class="dropdown-item" type="button">
+                                    <button
+                                        class={`dropdown-item ${
+                                            location === "Woodridge"
+                                                ? "active"
+                                                : ""
+                                        }`}
+                                        type="button"
+                                        onClick={() => {
+                                            addLocation("Woodridge");
+                                        }}
+                                    >
                                         Woodridge
                                     </button>
                                 </div>

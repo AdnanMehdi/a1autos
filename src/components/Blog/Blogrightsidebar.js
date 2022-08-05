@@ -1,41 +1,112 @@
-import React, {Component} from 'react';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { BlogContext } from "../../store/BlogContext";
 
-class Blogrightsidebar extends Component{
-    render(){
-        let ServiceData = this.props.ServiceData;
-        return(
-            <div className="blog-sidebar">
-                <div className="widget sidebar_widget widget_search">
+function Blogrightsidebar({ BlogData }) {
+    const blogCtx = useContext(BlogContext);
+    return (
+        <div className="blog-sidebar">
+            <div className="widget sidebar_widget widget_recent_post mt_60">
+                <div className="widget_title">
+                    <h3 className="f_p f_size_20 t_color3">Recent posts</h3>
+                    <div className="border_bottom"></div>
+                </div>
+                {BlogData.Blogs.slice(0, 5).map((post) => {
+                    return (
+                        <div className="media post_item" key={post.id}>
+                            <img
+                                src={require("../../img/new/blog/" +
+                                    post.image +
+                                    ".jpg")}
+                                alt=""
+                                width="100"
+                                height="80"
+                            />
+                            <div className="media-body">
+                                <Link
+                                    to={`/Blog/${post.slug}`}
+                                    onClick={() => {
+                                        blogCtx.setBlogPost(
+                                            post.title,
+                                            post.description,
+                                            post.date,
+                                            post.body,
+                                            post.image
+                                        );
+                                    }}
+                                >
+                                    <h3 className="f_size_16 f_p f_400">
+                                        {post.title}
+                                    </h3>
+                                </Link>
+                                <div className="entry_post_info">
+                                    By: <span> Admin | </span>
+                                    <span>{post.date}</span>
+                                </div>
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
+}
+
+{
+    /* class Blogrightsidebar extends Component {
+    render() {
+        let BlogData = this.props.BlogData;
+        return (
+            <div className="blog-sidebar"> */
+}
+{
+    /* <div className="widget sidebar_widget widget_search">
                     <form action="#" className="search-form input-group">
                         <input type="search" className="form-control widget_input" placeholder="Search"/>
                         <button type="submit"><i className="ti-search"></i></button>
                     </form>
-                </div>
-                <div className="widget sidebar_widget widget_recent_post mt_60">
-                    <div className="widget_title">
-                        <h3 className="f_p f_size_20 t_color3">Recent posts</h3>
-                        <div className="border_bottom"></div>
-                    </div>
-                    {
-                        ServiceData.rpost.map(post=>{
-                            return(
-                                <div className="media post_item" key={post.id}>
-                                    <img src={require('../../img/' + post.image)} alt=""/>
-                                    <div className="media-body">
-                                        <a href=".#">
-                                            <h3 className="f_size_16 f_p f_400">{post.ptitle}</h3>
-                                        </a>
-                                        <div className="entry_post_info">
-                                            By: <a href=".#">{post.admin}</a>
-                                            <a href=".#">{post.date}</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-                <div className="widget sidebar_widget widget_categorie mt_60">
+                </div> */
+}
+{
+    /* // <div className="widget sidebar_widget widget_recent_post mt_60">
+                //     <div className="widget_title">
+                //         <h3 className="f_p f_size_20 t_color3">Recent posts</h3>
+                //         <div className="border_bottom"></div>
+                //     </div>
+                //     {BlogData.Blogs.slice(0, 5).map((post) => {
+                //         return (
+                //             <div className="media post_item" key={post.id}>
+                //                 <img
+                //                     src={require("../../img/new/blog/" +
+                //                         post.image +
+                //                         ".jpg")}
+                //                     alt=""
+                //                     width="100"
+                //                     height="80"
+                //                 />
+                //                 <div className="media-body">
+                //                     <Link
+                //                         to={`/Blog/${post.slug}`}
+                //                         onClick={() => {
+                //                             alert("hello World");
+                //                         }}
+                //                     >
+                //                         <h3 className="f_size_16 f_p f_400">
+                //                             {post.title}
+                //                         </h3>
+                //                     </Link>
+                //                     <div className="entry_post_info">
+                //                         By: <span> Admin | </span>
+                //                         <span>{post.date}</span>
+                //                     </div>
+                //                 </div>
+                //             </div>
+                //         );
+                //     })}
+                // </div> */
+}
+{
+    /* <div className="widget sidebar_widget widget_categorie mt_60">
                     <div className="widget_title">
                         <h3 className="f_p f_size_20 t_color3">Categories</h3>
                         <div className="border_bottom"></div>
@@ -66,9 +137,12 @@ class Blogrightsidebar extends Component{
                         <a href=".#">Landing</a>
                         <a href=".#">Wheels</a>
                     </div>
-                </div>
-            </div>
-        )
-    }
+                </div> */
+}
+{
+    /* //             </div>
+//         );
+//     }
+// } */
 }
 export default Blogrightsidebar;

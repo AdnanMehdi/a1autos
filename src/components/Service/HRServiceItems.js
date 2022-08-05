@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Reveal from "react-reveal";
 import { Link } from "react-router-dom";
-import { ServiceDetailsContext } from "../../store/ServiceDetailsContext";
+import { ServiceDetailsContext as ServiceContext} from "../../store/ServiceDetailsContext";
 
 function HRServiceItems({
     HRtitle,
@@ -11,15 +11,15 @@ function HRServiceItems({
     iclass,
     slug,
 }) {
-    const serviceDetailsCtx = useContext(ServiceDetailsContext);
+    const serviceCtx = useContext(ServiceContext);
 
     return (
         <div className="col-lg-4 col-sm-6">
             <Link
                 to={`/service/${HRtitle}/${Hicon}`}
                 // onClick={() => {
-                //     serviceDetailsCtx.addServiceName(HRtitle);
-                //     alert("hello world");
+                //     serviceCtx.addServiceName('Irfan khan jan');
+                //     alert(serviceCtx.serviceName);
                 // }}
             >
                 {/* <Link to={`/ServiceDetails`}> */}
@@ -37,6 +37,10 @@ function HRServiceItems({
                             {HRtitle}
                         </h5>
                         <p className="f_400">{HRdescription}</p>
+                        {/* <button onClick={() => {
+                            serviceCtx.addServiceName('Irfan khan jan');
+                            alert(serviceCtx.serviceName);
+                        }}>Click me</button> */}
                     </div>
                 </Reveal>
             </Link>

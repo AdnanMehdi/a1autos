@@ -36,6 +36,8 @@ import ServiceDetails from "./Pages/ServiceDetails";
 import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import BlogGridPage from "./Pages/BlogGridPage";
+import BlogGridPage2 from "./Pages/BlogGridPage2";
+import BlogGridPage3 from "./Pages/BlogGridPage3";
 import NotFound from "./Pages/404";
 
 class App extends Component {
@@ -88,12 +90,20 @@ class App extends Component {
                     /> */}
                     <ScrollToTopRoute path="/Bloglist" component={Bloglist} />
                     <ScrollToTopRoute
-                        path="/BlogSingle"
+                        path="/Blog/:blogTitle"
                         component={BlogSingle}
                     />
                     <ScrollToTopRoute
-                        path="/BlogGridPage"
+                        path="/blog-posts/1"
                         component={BlogGridPage}
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/2"
+                        component={BlogGridPage2}
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/3"
+                        component={BlogGridPage3}
                     />
                     <ScrollToTopRoute path="/Contact" component={Contact} />
                     {/* <ScrollToTopRoute path="/Landing" component={Landing} />

@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import SeoTitle from "../Title/SeoTitle";
 import HRServiceItems from "./HRServiceItems";
+import { LocationContext } from "../../store/LocationContext";
 import Fade from "react-reveal/Fade";
+import { ServiceDetailsProvider as ServiceProvider } from "../../store/ServiceDetailsContext";
 
 const Service = ({ ServiceData }) => {
+    const { location } = useContext(LocationContext);
+
     return (
         <React.Fragment>
             <section className="prototype_service_info" id="services">
@@ -15,26 +19,27 @@ const Service = ({ ServiceData }) => {
                     <div className="pulse-x"></div>
                 </div>
                 <div className="container">
-                    <SeoTitle Title="Services" TitleP="" />
+                    <SeoTitle Title={`Our Services ${location !== '' ? `in ${location}` : ''}`} TitleP="" />
                     {/* <h2 className="f_size_30 f_600 t_color3 l_height45 text-center mb_90">
                         SaasLand is built for designers like you.
                         <br /> With useful features, an intuitive interface.
                     </h2> */}
-                    <div className="row p_service_info">
-                        {ServiceData.HRService.map((item) => {
-                            return (
-                                <HRServiceItems
-                                    slug={item.slug}
-                                    HRtitle={item.HRtitles}
-                                    HRdescription={item.HRdescription}
-                                    Hicon={item.Hicon}
-                                    rclass={item.rclass}
-                                    iclass={item.iclass}
-                                    key={item.id}
-                                />
-                            );
-                        })}
-                    </div>
+                    
+                        <div className="row p_service_info">
+                            {ServiceData.HRService.map((item) => {
+                                return (
+                                    <HRServiceItems
+                                        slug={item.slug}
+                                        HRtitle={item.HRtitles}
+                                        HRdescription={item.HRdescription}
+                                        Hicon={item.Hicon}
+                                        rclass={item.rclass}
+                                        iclass={item.iclass}
+                                        key={item.id}
+                                    />
+                                );
+                            })}
+                        </div>
                 </div>
             </section>
         </React.Fragment>

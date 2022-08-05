@@ -1,6 +1,23 @@
 import React from "react";
 
-const ServiceDetails = () => {
+const ServiceDetails = ({title}) => {
+    let text = ''
+    
+    if(title == 'Free Scrap Car Removal') {
+        text = 'We are swollen with pride to mention here the characteristics of our scrap car removal team. <br/><br/> The one who speaks simple and the one who is humble and there will be no twisting of words. It will be a transparent agreement that is not concealed in any fake promises. <br/><br/> The one who explains thoroughly, right before, during and after the scrap car removal we will be with you at every step and will answer all your queries promptly. <br/><br/> The one who responds promptly, and breaks the standard workflow when needed. <br/><br/> When the trash mass up in landfills eventually decomposes, it can let go greenhouse gases like methane into the air, and other harmful substances into the ground and water. Scrap car removal is a way of avoiding doing this kind of damage to the environment.';
+    } else if(title == 'Cash for Used Cars') {
+        text = 'Many older cars, even if they are virtually in running motion can cause serious damage to the environment. Leaking fluids and fuels from unused cars resting in your backyard can leach into the groundwater system, cause de-vegetation and widespread contamination.<br/><br/>Our Cash for Cars services encourage responsible disposal of toxic fluids and will scrap your car in an eco-friendly manner.<br/><br/>In the scrapyard, the parts of the vehicles are segregated. The parts that are working are refurbished and are sold to dealers, whereas the metal is extracted from the non-working parts and sold as scrap.<br/><br/>The rest of the parts of the vehicles are carefully recycled that they do not end up in the landfills and clog the environment.';
+    } else if(title == 'Cash for Junk Cars'){
+        text = 'If you have a junk car, truck, van, SUV, or any other vehicle you need to make a call to us. We are top free car removal for a good reason. We will make you an offer no matter in what condition your vehicle is.<br/><br/>We make it very trouble-free; just get a quote of your car from us. You can either call us or you can fill an online form. When you fill out an online form you need to answer some basics of your vehicle such as year of its make and model and your location.In the end, we will leave you with nothing but cash for cars.<br/><br/>Our administration is very wide and inventive we are pleased to present ourselves as the most trusted auto trade purchasers. We promise to serve our customers with integrity';
+    } else if(title == 'All Brand Car Wreckers') {
+        text = 'Our crew of professional A1 Auto Recycling specialists is highly efficient.<br/><br/>Our Car Wreckers team will give you a quote and cash immediately.<br/><br/>Our sales staff are trained to help you locate the used vehicle you require. If you are not certain what to do after reading our tips, we are confident that as soon as you arrive and collect your vehicle hire, you will see that you find yourself running out of time, as the attractions on the Brisbane are endless.';
+    } else if(title == 'Cash for Damaged Cars') {
+        text = 'There are plenty of parts in a car that at the least still holds some worth and can be utilized in any other vehicle. In case the vehicle is not too old but is damaged by any crash, it is quite hard to sell it to a prospective customer. Keeping an extremely old and damaged car may be an eyesore for your neighbors.<br/><br/>Thus, you no longer need to search for professional mechanics to repair your damaged car as A1 Auto Recycling saves you from spending again and again on your damaged car and helps you to sell it for top cash for cars.<br/><br/>Inform us about a year, make, and model, mileage, and the exterior and interior condition of your vehicle for a fair assessment. We will schedule an appointment according to your flexibility and get your vehicle picked.';
+    } else if(title == 'Unwanted Car Buyer') {
+        text = 'We provide you the great and easy way to turn your scrap car into cash for cars. If you are looking to car disposal and a quick and hassle-free way to sell your car then you are at the right site.<br/><br/>Just because your car gets old and not working that does not mean you cannot do anything with that. We are a scrap car removal service provider that not only accepts and remove old and unwanted cars, but we also purchase vans, 4*4, SUVs, Ute’s, trucks, and other types of commercial vehicles.<br/><br/>The age, make, model, as well as the condition of your vehicle, is not important to us as at A1 Auto Recycling we accept cars even they are not in a running condition and completely rusted.<br/><br/>So, if you are worried about having to dispose of your old, damaged, and wrecked vehicle at a throwaway price, get in touch with us. We are confident that our offer will impress you!';
+    }
+
+
     return (
         <section className="service_details_area sec_pad">
             <div className="container">
@@ -99,50 +116,11 @@ const ServiceDetails = () => {
                     <div className="col-lg-7">
                         <div className="details_content">
                             <div className="sec_title">
-                                <p className="f_400 f_size_15">
-                                    He lost his bottle a load of old tosh cup of
-                                    tea brolly bog-standard matie boy blow off
-                                    the little rotter morish, haggle hotpot
-                                    skive off cuppa don't get shirty with me off
-                                    his nut the full monty. Starkers morish down
-                                    the pub such a fibber quaint gosh Harry boot
-                                    owt to do with me the little rotter, baking
-                                    cakes Eaton ummm I'm telling pardon me the
-                                    bee's knees vagabond Oxford chap, A bit of
-                                    how's your father bog-standard hanky panky
-                                    daft well lavatory bubble and squeak the
-                                    full monty. That say nice one grub cup of
-                                    tea so I said barmy only a quid, I it's your
-                                    round gutted mate cup of char golly gosh
-                                    dropped a clanger my good sir, James Bond
-                                    happy days brilliant blimey I is. Boot
-                                    Jeffrey cockup the BBC pardon me victoria
-                                    sponge Why chip shop what a load of rubbish
-                                    pukka brolly cuppa tickety-boo bog-standard
-                                    cheesed off posh, bugger Eaton William
-                                    smashing knackered bog bonnet bobby bender
-                                    cobblers only a quid baking cakes the full
-                                    monty pardon you.
+                            {text !== '' && (
+                                <p className="f_400 f_size_15" dangerouslySetInnerHTML={{__html: text}}>
                                 </p>
-                                <p className="f_400 f_size_20">
-                                    Twit bonnet Jeffrey hunky-dory gormless
-                                    chancer bog-standard spiffing good time,
-                                    young delinquent Charles don't get shirty
-                                    with me the BBC is brown bread off his nut a
-                                    load of old tosh, chap grub bog skive off
-                                    pardon me bleeder. Lavatory on your bike
-                                    mate happy days the little rotter arse over
-                                    tit no biggie at public school wind up car
-                                    boot bamboozled well barmy bleeder the
-                                    wireless bugger, cockup blatant David it's
-                                    all gone to pot morish mush sloshed boot A
-                                    bit of how's your father skive off cheers a
-                                    load of old tosh. No biggie mush I don't
-                                    want no agro it's your round cack boot say,
-                                    the full monty mufty such a fibber up the
-                                    duff Why, Eaton pardon me spiffing blower
-                                    brown bread.
-                                </p>
+                                )
+                            }
                             </div>
                         </div>
                     </div>

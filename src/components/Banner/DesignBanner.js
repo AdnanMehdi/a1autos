@@ -6,12 +6,36 @@ const DesignBanner = () => {
         <section className="seo_home_area">
             <div className="home_bubble">
                 {/* <div className="bubble b_one"></div> */}
-                <img className="bubble b_one"  src={require("../../img/seo/car-1.png")} alt="" />
-                <img className="bubble b_two"  src={require("../../img/seo/dollar-2.png")} alt="" />
-                <img className="bubble b_three"  src={require("../../img/seo/dollar-1.png")} alt="" />
-                <img className="bubble b_four"  src={require("../../img/seo/car-2.png")} alt="" />
-                <img className="bubble b_five"  src={require("../../img/seo/dollar-1.png")} alt="" />
-                <img className="bubble b_six"  src={require("../../img/seo/dollar-2.png")} alt="" />
+                <img
+                    className="bubble b_one"
+                    src={require("../../img/seo/car-1.png")}
+                    alt=""
+                />
+                <img
+                    className="bubble b_two"
+                    src={require("../../img/seo/dollar-2.png")}
+                    alt=""
+                />
+                <img
+                    className="bubble b_three"
+                    src={require("../../img/seo/dollar-1.png")}
+                    alt=""
+                />
+                <img
+                    className="bubble b_four"
+                    src={require("../../img/seo/car-2.png")}
+                    alt=""
+                />
+                <img
+                    className="bubble b_five"
+                    src={require("../../img/seo/dollar-1.png")}
+                    alt=""
+                />
+                <img
+                    className="bubble b_six"
+                    src={require("../../img/seo/dollar-2.png")}
+                    alt=""
+                />
                 {/* <div
                     className="triangle b_seven"
                     data-parallax='{"x": 20, "y": 150}'
@@ -41,6 +65,9 @@ const DesignBanner = () => {
                 <div className="container custom_container">
                     <div className="row">
                         <div className="col-md-12 col-lg-8 seo_banner_content mb-5">
+                            <h3 className="text-center">
+                                Get instant cash for your used/scrap car
+                            </h3>
                             <div className="saas_home_img">
                                 <Reveal effect="fadeInUp" duration={1400}>
                                     {/* <img
@@ -53,10 +80,12 @@ const DesignBanner = () => {
                                             autoPlay="true"
                                             loop
                                             muted
-                                            defaultmuted 
+                                            defaultmuted
                                             playsinline
                                             className="embed-responsive-item"
-                                            style={{filter: "brightness(100%)"}}
+                                            style={{
+                                                filter: "brightness(100%)",
+                                            }}
                                         ></video>
                                     </div>
                                 </Reveal>
@@ -67,6 +96,9 @@ const DesignBanner = () => {
                                 {/* <div className="card">
                                 <div className="card-body"> */}
                                 <form className="quote_form" action="">
+                                    <h4 className="text-center pb-3">
+                                        Get free quotation now!
+                                    </h4>
                                     <div className="row">
                                         <div className="form-group col-6 text_box">
                                             <input
@@ -75,7 +107,6 @@ const DesignBanner = () => {
                                                 id="name"
                                                 placeholder="Your Name"
                                                 required
-                                                style={{paddingLeft: "15px"}}
                                             />
                                         </div>
                                         <div className="col-6 text_box">
@@ -85,7 +116,6 @@ const DesignBanner = () => {
                                                 id="email"
                                                 placeholder="Your Email"
                                                 required
-                                                style={{paddingLeft: "15px"}}
                                             />
                                         </div>
                                         <div className="form-group col-6 text_box">
@@ -95,7 +125,6 @@ const DesignBanner = () => {
                                                 id="phone-number"
                                                 placeholder="Your Phone Number"
                                                 required
-                                                style={{paddingLeft: "15px"}}
                                             />
                                         </div>
                                         <div className="col-6 text_box">
@@ -105,7 +134,6 @@ const DesignBanner = () => {
                                                 id="make-model"
                                                 placeholder="Your Make Model"
                                                 required
-                                                style={{paddingLeft: "15px"}}
                                             />
                                         </div>
                                         <div className="form-group col-md-12 text_box">
@@ -115,7 +143,6 @@ const DesignBanner = () => {
                                                 id="sub-urb"
                                                 placeholder="Your Sub Urb"
                                                 required
-                                                style={{paddingLeft: "15px"}}
                                             />
                                         </div>
                                         <div className="form-group col-md-12 text_box">
@@ -126,12 +153,14 @@ const DesignBanner = () => {
                                                 placeholder="Your Message"
                                                 required
                                                 rows="1"
-                                                style={{paddingLeft: "15px"}}
                                             />
                                         </div>
                                     </div>
                                     <div className="text-center">
-                                        <button className="btn_three" type="submit">
+                                        <button
+                                            className="btn_three"
+                                            type="submit"
+                                        >
                                             Get Quote Now
                                         </button>
                                     </div>

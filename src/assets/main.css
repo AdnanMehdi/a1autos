@@ -145,7 +145,7 @@ button:focus {
 
     .header_area .navbar .container .navbar-brand img {
         height: 50px;
-        width: 50px;  
+        width: 50px;
     }
 
     .saas_home_img div video.embed-responsive-item {
@@ -166,14 +166,14 @@ button:focus {
         float: none;
     }
 
-    .home_bubble .bubble.b_four, 
+    .home_bubble .bubble.b_four,
     .home_bubble .bubble.b_one {
         display: none;
     }
 
     .navbar-collapse, 
     .menu_four .navbar-collapse {
-        overflow-y: visible !important;
+        max-height: 509px !important;
     }
 }
 
@@ -2079,6 +2079,10 @@ button:focus {
     .nav_right_btn {
         display: none;
     }
+
+    .menu_one .navbar-collapse {
+        margin-left: 150px !important;
+    }
 }
 
 .menu_four .btn_get {
@@ -2753,6 +2757,14 @@ button:focus {
     color: #6754e2;
     border: 2px solid #ccc5fa;
     background: transparent;
+}
+
+.btn_get.new_btn a {
+    color: #fff;
+}
+
+.navbar_fixed .header_area .menu_one .btn_get.new_btn a {
+        color: #6754e2;
 }
 
 .navbar_fixed .header_area .menu_one .btn_get.new_btn:hover {
@@ -5126,8 +5138,8 @@ button:focus {
 
 .home_bubble .bubble.b_three,
 .home_bubble .bubble.b_six {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 45px;
 }
 
 .home_bubble .bubble.b_one {
@@ -5415,23 +5427,23 @@ button:focus {
 
 @-webkit-keyframes spin1 {
     0% {
-        -webkit-transform:  translateX(0);
-        transform:  translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-        -webkit-transform:  translateX(50px);
-        transform:  translateX(50px);
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
     }
 }
 
 @keyframes spin1 {
     0% {
-        -webkit-transform:  translateX(0);
-        transform:  translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-        -webkit-transform:  translateX(50px);
-         transform: translateY(50px);
+        -webkit-transform: translateX(50px);
+        transform: translateY(50px);
     }
 }
 
@@ -13398,8 +13410,19 @@ button:focus {
     padding: 30px;
 }
 
+.contact_form .quote_form .text_box {
+    margin-bottom: 24px;
+}
+
+.quote_form .text_box input[type="text"],
+.quote_form .text_box input[type="email"] {
+    padding-left: 15px;
+    height: 48px;
+}
+
 .text_box .message {
-    height: 100px;
+    height: 75px;
+    padding-left: 15px;
 }
 
 .contact_form {
@@ -24375,8 +24398,8 @@ a .h_head:hover {
     position: absolute;
     bottom: 0;
     left: 30%;
-    -webkit-animation: myfirst 30s linear infinite;
-    animation: myfirst 30s linear infinite;
+    -webkit-animation: myfirst 20s linear infinite;
+    animation: myfirst 20s linear infinite;
 }
 
 .new_footer_top .footer_bg .footer_bg_two {

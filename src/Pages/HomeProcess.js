@@ -12,7 +12,7 @@ function HomeProcess() {
             <div className="container">
                 <div className="features_info">
                     <SeoTitle
-                        Title="Process"
+                        Title="Process: Sell your car in 3 easy steps"
                         TitleP="Selling your old car won’t be as stress-free as you are might thinking. If you are wondering where to sell my car for cash, you are accessing the right site."
                     />
                     <img

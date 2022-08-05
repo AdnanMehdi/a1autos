@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { defaultProps } from "react-stickynode";
 import HRServiceItems from "../components/Service/HRServiceItems";
 import Faq from "../Pages/ServiceDetails";
 
@@ -9,7 +10,7 @@ export const ServiceDetailsContext = createContext({
     addSeriveImage: () => {},
 });
 
-export const ServiceDetailsProvider = () => {
+export const ServiceDetailsProvider = (props) => {
     const [sName, setSName] = useState("");
     const [sImage, setSImage] = useState("");
 
@@ -22,16 +23,15 @@ export const ServiceDetailsProvider = () => {
     };
 
     let context = {
-        name: sName,
-        image: sImage,
+        serviceName: sName,
+        serviceImage: sImage,
         addServiceName: addServiceNameHandler,
         addServiceImage: addServiceImageHandler,
     };
 
     return (
         <ServiceDetailsContext.Provider value={context}>
-            <HRServiceItems />
-            <Faq />
+            {props.children}
         </ServiceDetailsContext.Provider>
     );
 };

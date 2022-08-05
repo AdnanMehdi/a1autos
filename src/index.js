@@ -18,6 +18,8 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import "popper.js";
 
 import { LocationProvider } from "./store/LocationContext";
+import { BlogContextProvider } from "./store/BlogContext";
+// import { ServiceDetailsProvider as ServiceProvider } from "./store/ServiceDetailsContext";
 
 const loader = document.querySelector("#preloader");
 
@@ -30,9 +32,13 @@ setTimeout(
     () =>
         // the show/hide functions are passed as props
         ReactDOM.render(
-            // <LocationProvider>
-            <App hideLoader={hideLoader} showLoader={showLoader} />,
-            // </LocationProvider>,
+            <LocationProvider>
+                <BlogContextProvider>
+                    {/* <ServiceProvider> */}
+                    <App hideLoader={hideLoader} showLoader={showLoader} />,
+                    {/* </ServiceProvider> */}
+                </BlogContextProvider>
+            </LocationProvider>,
             document.getElementById("root")
         ),
     1000

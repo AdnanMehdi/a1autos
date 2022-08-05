@@ -72,7 +72,7 @@ class Subscribe extends Component {
                     </div>
                 </section>
                 <Testimonial tClass="testimonial_area sec_pad" FooterData={FooterData}/>
-                <section className="seo_partner_logo_area sec_pad">
+                {/* <section className="seo_partner_logo_area sec_pad">
                     <div className="container">
                         <div className="seo_sec_title text-center mb_70">
                             <Fade bottom><h2>Relied on marketers, trusted by engineers,<br/> and beloved by executives, everyw here.</h2></Fade>
@@ -109,7 +109,7 @@ class Subscribe extends Component {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 {/* <section className="seo_call_to_action_area sec_pad">
                     <div className="container">
                         <div className="seo_call_action_text">

@@ -18,6 +18,7 @@ class HRService extends Component {
                         SaasLand is built for designers like you.
                         <br /> With useful features, an intuitive interface.
                     </h2> */}
+
                     <div className="row p_service_info">
                         {ServiceData.HRService.map((item) => {
                             return (
