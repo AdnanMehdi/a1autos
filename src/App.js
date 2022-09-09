@@ -39,6 +39,7 @@ import BlogGridPage from "./Pages/BlogGridPage";
 import BlogGridPage2 from "./Pages/BlogGridPage2";
 import BlogGridPage3 from "./Pages/BlogGridPage3";
 import NotFound from "./Pages/404";
+import { HomeAcacia } from "./Pages/HomeAcacia";
 
 class App extends Component {
     componentDidMount() {
@@ -52,6 +53,50 @@ class App extends Component {
                         exact={true}
                         path={"/"}
                         component={Home}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Acacia-Ridge"}
+                        component={HomeAcacia}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Brisbane"}
+                        component={HomeAcacia}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Beenleigh"}
+                        component={HomeAcacia}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Coopers-Plains"}
+                        component={HomeAcacia}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Gold-Coast"}
+                        component={HomeAcacia}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Ipswich"}
+                        component={HomeAcacia}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Rocklea"}
+                        component={HomeAcacia}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Sunnybank"}
+                        component={HomeAcacia}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Toowoomba"}
+                        component={HomeAcacia}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Underwood"}
+                        component={HomeAcacia}
+                    />
+                    <ScrollToTopRoute
+                        path={"/Woodridge"}
+                        component={HomeAcacia}
                     />
                     <ScrollToTopRoute
                         path="/Digital-marketing"

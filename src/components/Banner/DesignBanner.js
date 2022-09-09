@@ -1,40 +1,97 @@
-import React from "react";
+import React, { useContext } from "react";
 import Reveal from "react-reveal/Reveal/";
+import { LocationContext } from "../../store/LocationContext";
 
 const DesignBanner = () => {
+    const { location } = useContext(LocationContext);
+
+    let videoLocation = "";
+    let iconFolder = "";
+    let iconName = "";
+
+    if (location === "") {
+        videoLocation = "home";
+        iconFolder = "home";
+        iconName = "home";
+    } else if (location === "Acacia Ridge") {
+        videoLocation = "acacia";
+        iconFolder = "acacia";
+        iconName = "acacia";
+    } else if (location === "Brisbane") {
+        videoLocation = "brisbane";
+        iconFolder = "brisbane";
+        iconName = "brisbane";
+    } else if (location === "Beenleigh") {
+        videoLocation = "beenleigh";
+        iconFolder = "beenleigh";
+        iconName = "beenleigh";
+    } else if (location === "Coopers Plains") {
+        videoLocation = "coopers";
+        iconFolder = "coopers";
+        iconName = "coopers";
+    } else if (location === "Gold Coast") {
+        videoLocation = "goldcoast";
+        iconFolder = "gold-coast";
+        iconName = "goldcoast";
+    } else if (location === "Ipswich") {
+        videoLocation = "ipswich";
+        iconFolder = "ipswich";
+        iconName = "ipswich";
+    } else if (location === "Rocklea") {
+        videoLocation = "rocklea";
+        iconFolder = "rocklea";
+        iconName = "rocklea";
+    } else if (location === "Sunnybank") {
+        videoLocation = "sunnybank";
+        iconFolder = "sunnybank";
+        iconName = "sunnybank";
+    } else if (location === "Toowoomba") {
+        videoLocation = "toowoomba";
+        iconFolder = "toowoomba";
+        iconName = "toowoomba";
+    } else if (location === "Underwood") {
+        videoLocation = "underwood";
+        iconFolder = "underwood";
+        iconName = "underwood";
+    } else if (location === "Woodridge") {
+        videoLocation = "woodridge";
+        iconFolder = "woodridge";
+        iconName = "woodridge";
+    }
+
     return (
         <section className="seo_home_area">
             <div className="home_bubble">
                 {/* <div className="bubble b_one"></div> */}
                 <img
                     className="bubble b_one"
-                    src={require("../../img/seo/car-1.png")}
-                    alt=""
+                    src={require(`../../img/seo/${iconFolder}/car-1-${iconName}.png`)}
+                    alt="truck-icon"
                 />
                 <img
                     className="bubble b_two"
-                    src={require("../../img/seo/dollar-2.png")}
-                    alt=""
+                    src={require(`../../img/seo/${iconFolder}/dollar-2-${iconName}.png`)}
+                    alt="cash-icon"
                 />
                 <img
                     className="bubble b_three"
-                    src={require("../../img/seo/dollar-1.png")}
-                    alt=""
+                    src={require(`../../img/seo/${iconFolder}/dollar-1-${iconName}.png`)}
+                    alt="dollar-icon"
                 />
                 <img
                     className="bubble b_four"
-                    src={require("../../img/seo/car-2.png")}
-                    alt=""
+                    src={require(`../../img/seo/${iconFolder}/car-2-${iconName}.png`)}
+                    alt="car-icon"
                 />
                 <img
                     className="bubble b_five"
-                    src={require("../../img/seo/dollar-1.png")}
-                    alt=""
+                    src={require(`../../img/seo/${iconFolder}/dollar-1-${iconName}.png`)}
+                    alt="dollar-icon"
                 />
                 <img
                     className="bubble b_six"
-                    src={require("../../img/seo/dollar-2.png")}
-                    alt=""
+                    src={require(`../../img/seo/${iconFolder}/dollar-2-${iconName}.png`)}
+                    alt="cash-icon"
                 />
                 {/* <div
                     className="triangle b_seven"
@@ -76,7 +133,7 @@ const DesignBanner = () => {
                             /> */}
                                     <div className="embed-responsive embed-responsive-4by3">
                                         <video
-                                            src={require("../../video/a1-auto.mp4")}
+                                            src={require(`../../video/a1-auto-${videoLocation}.mp4`)}
                                             autoPlay="true"
                                             loop
                                             muted

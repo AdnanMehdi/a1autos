@@ -1,24 +1,26 @@
 import React, { useContext } from "react";
 import Reveal from "react-reveal";
 import { Link } from "react-router-dom";
-import { ServiceDetailsContext as ServiceContext} from "../../store/ServiceDetailsContext";
+// import { ServiceDetailsContext as ServiceContext } from "../../store/ServiceDetailsContext";
 
 function HRServiceItems({
     HRtitle,
     HRdescription,
     Hicon,
     rclass,
+    iconFolder,
+    iconName,
     iclass,
     slug,
 }) {
-    const serviceCtx = useContext(ServiceContext);
+    // const serviceCtx = useContext(ServiceContext);
 
     return (
         <div className="col-lg-4 col-sm-6">
             <Link
                 to={`/service/${HRtitle}/${Hicon}`}
                 // onClick={() => {
-                //     serviceCtx.addServiceName('Irfan khan jan');
+                //     serviceCtx.addServiceName(HRtitle);
                 //     alert(serviceCtx.serviceName);
                 // }}
             >
@@ -28,13 +30,19 @@ function HRServiceItems({
                         {/* <div className={`icon ${iclass}`}><i className={`ti-${Hicon}`}></i></div> */}
                         <img
                             className="mb-3"
-                            src={require("../../img/home/" + Hicon + ".png")}
+                            src={require("../../img/home/" +
+                                iconFolder +
+                                "/" +
+                                Hicon +
+                                "-" +
+                                iconName +
+                                ".png")}
                             alt=""
                             width="150"
                             height="150"
                         />
                         <h5 className="f_600 f_p t_color3 f_size_24">
-                            {HRtitle}
+                            {HRtitle.split("-").join(" ")}
                         </h5>
                         <p className="f_400">{HRdescription}</p>
                         {/* <button onClick={() => {

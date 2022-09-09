@@ -84,7 +84,7 @@ const ServiceData = {
         {
             id: "1",
             slug: "cash-for-used-cars",
-            HRtitles: "Cash for Used Cars",
+            HRtitles: "Cash-for-Used-Cars",
             HRdescription:
                 "A point comes when we all get tired by driving the same car for years. If you are looking to sell your used car for cash, call us. We will help you in buying your desired car by paying top money for cars without worrying about the condition of your vehicle.",
             Hicon: "cash-for-used-car",
@@ -94,7 +94,7 @@ const ServiceData = {
         {
             id: "2",
             slug: "cash-for-junk-cars",
-            HRtitles: "Cash for Junk Cars",
+            HRtitles: "Cash-for-Junk-Cars",
             HRdescription:
                 "We are leading junk car buyer near you. Let us know the basic details about your vehicle (age, make, model, mileage, and condition), and we will help you with our junk car removal services in Brisbane. Besides paying you cash for junk cars we will wreck your car",
             Hicon: "cash-for-junk-car",
@@ -104,7 +104,7 @@ const ServiceData = {
         {
             id: "3",
             slug: "all-brand-car-wreckers",
-            HRtitles: "All Brand Car Wreckers",
+            HRtitles: "All-Brand-Car-Wreckers",
             HRdescription:
                 "We adore every vehicle of any brand, make, model, and year. We are car wreckers that wreck cars of all Japanese, American, and European brands such as Chrysler, Ford, Mazda, Dodge, Nissan, BMW, Honda, Mitsubishi, Subaru, Toyota, Volkswagen, and many more.",
             Hicon: "brand-car-wreck",
@@ -114,7 +114,7 @@ const ServiceData = {
         {
             id: "4",
             slug: "cash-for-damamged-cars",
-            HRtitles: "Cash for Damaged Cars",
+            HRtitles: "Cash-for-Damaged-Cars",
             HRdescription:
                 "There is no point of keeping a damaged car with you and paying its repair bills monthly when you can make some top cash for damaged cars. At A1 Auto Recycling, we offer instant and maximum cash for damaged car removals. It does not matter whether your vehicle is in one piece or crumbled in an accident, we are the one-stop solution for your damaged car removal.",
             Hicon: "cash-for-damaged-car",
@@ -124,7 +124,7 @@ const ServiceData = {
         {
             id: "5",
             slug: "free-scrap-removal",
-            HRtitles: "Free Scrap Car Removal",
+            HRtitles: "Free-Scrap-Car-Removal",
             HRdescription:
                 "Our free scrap car removal service is the best thing available to you when you choose us to get relived on your scrap car for cash. We understand how to scrap cars just sit in your backyard and get rusted. They are not only harmful to the environment but for you as well. Driving a scrap car is always risky, get rid of it today before it may harm you or your loved ones. Call us today.",
             Hicon: "free-scrap-removal",
@@ -134,7 +134,7 @@ const ServiceData = {
         {
             id: "6",
             slug: "unwanted-car-buyer",
-            HRtitles: "Unwanted Car Buyer",
+            HRtitles: "Unwanted-Car-Buyer",
             HRdescription:
                 "If you are searching about how to get rid of your unwanted car, your search ends here! We are unwanted car buyer that will make you able to make more cash from your unwanted car. Our cash for cars removal services start from giving a free quote and ends at free car removal.We provide you the best services at an affordablle price and we fulfill your requirements within a specified time period.",
             Hicon: "unwanted-car-buyers",

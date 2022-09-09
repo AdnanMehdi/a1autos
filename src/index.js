@@ -19,7 +19,7 @@ import "popper.js";
 
 import { LocationProvider } from "./store/LocationContext";
 import { BlogContextProvider } from "./store/BlogContext";
-// import { ServiceDetailsProvider as ServiceProvider } from "./store/ServiceDetailsContext";
+import { ServiceDetailsProvider as ServiceProvider } from "./store/ServiceDetailsContext";
 
 const loader = document.querySelector("#preloader");
 
@@ -34,9 +34,17 @@ setTimeout(
         ReactDOM.render(
             <LocationProvider>
                 <BlogContextProvider>
-                    {/* <ServiceProvider> */}
-                    <App hideLoader={hideLoader} showLoader={showLoader} />,
-                    {/* </ServiceProvider> */}
+                    <ServiceProvider>
+                        <a href="tel:0477003385" id="call-now-btn">
+                            <button
+                                style={{ border: "3px solid #5e2ced" }}
+                                className="btn btn_get btn_get_two"
+                            >
+                                Call Now: 0477 003 385
+                            </button>
+                        </a>
+                        <App hideLoader={hideLoader} showLoader={showLoader} />,
+                    </ServiceProvider>
                 </BlogContextProvider>
             </LocationProvider>,
             document.getElementById("root")

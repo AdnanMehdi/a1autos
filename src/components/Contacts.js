@@ -128,7 +128,7 @@ class Contacts extends Component {
             <section className="contact_info_area sec_pad bg_color">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-3">
+                        <div className="col-lg-4">
                             <div className="contact_info_item">
                                 <h6 className="f_p f_size_20 t_color3 f_500 mb_20">
                                     Office Address
@@ -144,7 +144,7 @@ class Contacts extends Component {
                                 <p className="f_400 f_size_15">
                                     <span className="f_400 t_color3">
                                         Phone:
-                                    </span>{" "}
+                                    </span>
                                     <a href="tel:0477003385">0477 003 385</a>
                                 </p>
                                 {/* <p className="f_400 f_size_15"><span className="f_400 t_color3">Fax:</span> <a href="tel:3024437488">(+096) 204 353 6684</a></p> */}
@@ -152,13 +152,13 @@ class Contacts extends Component {
                                     <span className="f_400 t_color3">
                                         Email:
                                     </span>{" "}
-                                    <a href="mailto:saasland@gmail.com">
-                                        saasland@gmail.com
+                                    <a href="mailto:aa1autorecycling@gmail.com">
+                                        aa1autorecycling@gmail.com
                                     </a>
                                 </p>
                             </div>
                         </div>
-                        <div className="contact_form col-lg-9">
+                        <div className="contact_form col-lg-8">
                             <h2 className="f_p f_size_22 t_color3 f_600 l_height28 mb_40">
                                 Leave a Message
                             </h2>

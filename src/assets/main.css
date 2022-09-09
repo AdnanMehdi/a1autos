@@ -144,8 +144,8 @@ button:focus {
     }
 
     .header_area .navbar .container .navbar-brand img {
-        height: 50px;
-        width: 50px;
+        height: 70px;
+        width: 70px;
     }
 
     .saas_home_img div video.embed-responsive-item {
@@ -171,9 +171,15 @@ button:focus {
         display: none;
     }
 
-    .navbar-collapse, 
+    .navbar-collapse,
     .menu_four .navbar-collapse {
         max-height: 509px !important;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    #call-now-btn {
+        display: none;
     }
 }
 
@@ -970,6 +976,19 @@ button:focus {
     .ctn-preloader .animation-preloader .txt-loading {
         font: bold 2em "Poppins", sans-serif;
     }
+
+    #call-now-btn {
+        background-color: #e9fbf3;
+        width: 100%;
+        height: 70px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 /*====================================================*/
@@ -1004,11 +1023,21 @@ button:focus {
     display: none;
 }
 
+@media (max-width: 991px) {
+    #call-btn-nav {
+        display: none;
+    }
+}
+
 @media (min-width: 992px) {
     .mobile_btn {
         visibility: hidden;
         display: none;
     }
+
+    /* #call-btn {
+        display: none;
+    } */
 }
 
 .menu > .nav-item {
@@ -2764,7 +2793,7 @@ button:focus {
 }
 
 .navbar_fixed .header_area .menu_one .btn_get.new_btn a {
-        color: #6754e2;
+    color: #6754e2;
 }
 
 .navbar_fixed .header_area .menu_one .btn_get.new_btn:hover {

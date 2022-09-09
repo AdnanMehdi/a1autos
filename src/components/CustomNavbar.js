@@ -30,8 +30,17 @@ function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
                                 alt="logo"
                                 width="100"
                                 height="100"
+                                id="site-logo"
                             />
                         </Link>
+                        {/* <a href="tel:0477003385" className="mt-2" id="call-btn">
+                            <button
+                                className={`btn btn_get btn_hover ${hbtnClass} mb-2 mb-md-0`}
+                                style={{ border: "3px solid #5E2CED" }}
+                            >
+                                0477 003 385
+                            </button>
+                        </a> */}
                         <button
                             className="navbar-toggler collapsed"
                             type="button"
@@ -456,7 +465,7 @@ function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
                                 </li>
                             </ul>
                             <div>
-                                <a href="tel:0477003385">
+                                <a href="tel:0477003385" id="call-btn-nav">
                                     <button
                                         className={`btn btn_get btn_hover ${hbtnClass} mb-2 mb-md-0`}
                                         style={{ border: "3px solid #5E2CED" }}
@@ -474,166 +483,210 @@ function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
                                     aria-haspopup="true"
                                     aria-expanded="false"
                                 >
-                                    Location
+                                    {location !== "" ? location : "Location"}
                                 </button>
                                 <div
                                     class="dropdown-menu"
                                     aria-labelledby="dropdownMenu2"
                                 >
-                                    <button
-                                        class={`dropdown-item ${
-                                            location == "" ? "active" : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("");
-                                        }}
+                                    <NavLink to="/" title="Home">
+                                        <button
+                                            class={`dropdown-item ${
+                                                location == "" ? "active" : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("");
+                                            }}
+                                        >
+                                            All Locations
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink
+                                        to="/Acacia-Ridge"
+                                        title="Acacia-Ridge"
                                     >
-                                        All Locations
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Acacia Ridge"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Acacia Ridge");
-                                        }}
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Acacia Ridge"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Acacia Ridge");
+                                            }}
+                                        >
+                                            Acacia Ridge
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink to="/Brisbane" title="Brisbane">
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Brisbane"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Brisbane");
+                                            }}
+                                        >
+                                            Birsbane
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink to="/Beenleigh" title="Beenleigh">
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Beenleigh"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Beenleigh");
+                                            }}
+                                        >
+                                            Beenleigh
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink
+                                        to="/Coopers-Plains"
+                                        title="Coopers-Plains"
                                     >
-                                        Acacia Ridge
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Brisbane"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Brisbane");
-                                        }}
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Coopers Plains"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Coopers Plains");
+                                            }}
+                                        >
+                                            Coopers Plains
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink
+                                        to="/Gold-Coast"
+                                        title="Gold-Coast"
                                     >
-                                        Birsbane
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Beenleigh"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Beenleigh");
-                                        }}
-                                    >
-                                        Beenleigh
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Coopers Plains"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Coopers Plains");
-                                        }}
-                                    >
-                                        Coopers Plains
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Gold Coast"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Gold Coast");
-                                        }}
-                                    >
-                                        Gold Coast
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Ipswich"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Ipswich");
-                                        }}
-                                    >
-                                        Ipswich
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Rocklea"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Rocklea");
-                                        }}
-                                    >
-                                        Rocklea
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Sunnybank"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Sunnybank");
-                                        }}
-                                    >
-                                        Sunnybank
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Toowoomba"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Toowoomba");
-                                        }}
-                                    >
-                                        Toowoomba
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Underwood"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Underwood");
-                                        }}
-                                    >
-                                        Underwood
-                                    </button>
-                                    <button
-                                        class={`dropdown-item ${
-                                            location === "Woodridge"
-                                                ? "active"
-                                                : ""
-                                        }`}
-                                        type="button"
-                                        onClick={() => {
-                                            addLocation("Woodridge");
-                                        }}
-                                    >
-                                        Woodridge
-                                    </button>
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Gold Coast"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Gold Coast");
+                                            }}
+                                        >
+                                            Gold Coast
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink to="/Ipswich" title="Ipswich">
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Ipswich"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Ipswich");
+                                            }}
+                                        >
+                                            Ipswich
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink to="/Rocklea" title="Rocklea">
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Rocklea"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Rocklea");
+                                            }}
+                                        >
+                                            Rocklea
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink to="/Sunnybank" title="Sunnybank">
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Sunnybank"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Sunnybank");
+                                            }}
+                                        >
+                                            Sunnybank
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink to="/Toowoomba" title="Toowoomba">
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Toowoomba"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Toowoomba");
+                                            }}
+                                        >
+                                            Toowoomba
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink to="/Underwood" title="Underwood">
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Underwood"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Underwood");
+                                            }}
+                                        >
+                                            Underwood
+                                        </button>
+                                    </NavLink>
+
+                                    <NavLink to="/Woodridge" title="Woodridge">
+                                        <button
+                                            class={`dropdown-item ${
+                                                location === "Woodridge"
+                                                    ? "active"
+                                                    : ""
+                                            }`}
+                                            type="button"
+                                            onClick={() => {
+                                                addLocation("Woodridge");
+                                            }}
+                                        >
+                                            Woodridge
+                                        </button>
+                                    </NavLink>
                                 </div>
                             </div>
                         </div>
