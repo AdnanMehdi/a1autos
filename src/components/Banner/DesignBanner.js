@@ -1,9 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 import Reveal from "react-reveal/Reveal/";
 import { LocationContext } from "../../store/LocationContext";
+import emailjs from "@emailjs/browser";
 
 const DesignBanner = () => {
     const { location } = useContext(LocationContext);
+    const [status, setStatus] = useState(undefined);
+    const form = useRef();
+    const name = useRef(null);
+    const email = useRef(null);
+    const phone_number = useRef(null);
+    const make = useRef(null);
+    const sub_urb = useRef(null);
+    const message = useRef(null);
 
     let videoLocation = "";
     let iconFolder = "";
@@ -57,6 +66,32 @@ const DesignBanner = () => {
         videoLocation = "woodridge";
         iconFolder = "woodridge";
         iconName = "woodridge";
+    }
+
+    function sendEmail(e) {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                "service_xqwqy4x",
+                "template_yhz2obm",
+                form.current,
+                "3nu8MipAR5Bt-cYMp"
+            )
+            .then(
+                (result) => {
+                    setStatus({ type: "success" });
+                    name.current.value = "";
+                    email.current.value = "";
+                    phone_number.current.value = "";
+                    make.current.value = "";
+                    sub_urb.current.value = "";
+                    message.current.value = "";
+                },
+                (error) => {
+                    setStatus({ type: "error" });
+                }
+            );
     }
 
     return (
@@ -152,18 +187,35 @@ const DesignBanner = () => {
                             <div className="contact_form col-md-12 col-lg-4">
                                 {/* <div className="card">
                                 <div className="card-body"> */}
-                                <form className="quote_form" action="">
+                                <form
+                                    ref={form}
+                                    className="quote_form"
+                                    action=""
+                                    onSubmit={sendEmail}
+                                >
                                     <h4 className="text-center pb-3">
                                         Get free quotation now!
                                     </h4>
+                                    {status?.type === "success" && (
+                                        <p className="alert alert-success">
+                                            Message Send Successfully
+                                        </p>
+                                    )}
+                                    {status?.type === "error" && (
+                                        <p className="alert alert-danger">
+                                            Message Not Sent
+                                        </p>
+                                    )}
                                     <div className="row">
                                         <div className="form-group col-6 text_box">
                                             <input
                                                 type="text"
                                                 class="form-control"
                                                 id="name"
+                                                name="name"
                                                 placeholder="Your Name"
                                                 required
+                                                ref={name}
                                             />
                                         </div>
                                         <div className="col-6 text_box">
@@ -171,8 +223,10 @@ const DesignBanner = () => {
                                                 type="email"
                                                 class="form-control"
                                                 id="email"
+                                                name="email"
                                                 placeholder="Your Email"
                                                 required
+                                                ref={email}
                                             />
                                         </div>
                                         <div className="form-group col-6 text_box">
@@ -180,8 +234,10 @@ const DesignBanner = () => {
                                                 type="text"
                                                 class="form-control"
                                                 id="phone-number"
+                                                name="phone_number"
                                                 placeholder="Your Phone Number"
                                                 required
+                                                ref={phone_number}
                                             />
                                         </div>
                                         <div className="col-6 text_box">
@@ -189,8 +245,10 @@ const DesignBanner = () => {
                                                 type="text"
                                                 class="form-control"
                                                 id="make-model"
+                                                name="make"
                                                 placeholder="Your Make Model"
                                                 required
+                                                ref={make}
                                             />
                                         </div>
                                         <div className="form-group col-md-12 text_box">
@@ -198,8 +256,10 @@ const DesignBanner = () => {
                                                 type="text"
                                                 class="form-control"
                                                 id="sub-urb"
+                                                name="sub_urb"
                                                 placeholder="Your Sub Urb"
                                                 required
+                                                ref={sub_urb}
                                             />
                                         </div>
                                         <div className="form-group col-md-12 text_box">
@@ -207,9 +267,11 @@ const DesignBanner = () => {
                                                 type="text"
                                                 class="form-control message"
                                                 id="message"
+                                                name="message"
                                                 placeholder="Your Message"
                                                 required
                                                 rows="1"
+                                                ref={message}
                                             />
                                         </div>
                                     </div>

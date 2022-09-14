@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ServiceDetails = ({ title }) => {
     let text = "";
     let newTitle = title.split("-").join(" ");
+    const [status, setStatus] = useState(undefined);
+    const form = useRef();
+    const name = useRef(null);
+    const email = useRef(null);
+    const phone_number = useRef(null);
+    const make = useRef(null);
+    const sub_urb = useRef(null);
+    const message = useRef(null);
 
     if (newTitle == "Free Scrap Car Removal") {
         text =
@@ -24,6 +33,32 @@ const ServiceDetails = ({ title }) => {
             "We provide you the great and easy way to turn your scrap car into cash for cars. If you are looking to car disposal and a quick and hassle-free way to sell your car then you are at the right site.<br/><br/>Just because your car gets old and not working that does not mean you cannot do anything with that. We are a scrap car removal service provider that not only accepts and remove old and unwanted cars, but we also purchase vans, 4*4, SUVs, Ute’s, trucks, and other types of commercial vehicles.<br/><br/>The age, make, model, as well as the condition of your vehicle, is not important to us as at A1 Auto Recycling we accept cars even they are not in a running condition and completely rusted.<br/><br/>So, if you are worried about having to dispose of your old, damaged, and wrecked vehicle at a throwaway price, get in touch with us. We are confident that our offer will impress you!";
     }
 
+    function sendEmail(e) {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                "service_xqwqy4x",
+                "template_yhz2obm",
+                form.current,
+                "3nu8MipAR5Bt-cYMp"
+            )
+            .then(
+                (result) => {
+                    setStatus({ type: "success" });
+                    name.current.value = "";
+                    email.current.value = "";
+                    phone_number.current.value = "";
+                    make.current.value = "";
+                    sub_urb.current.value = "";
+                    message.current.value = "";
+                },
+                (error) => {
+                    setStatus({ type: "error" });
+                }
+            );
+    }
+
     return (
         <section className="service_details_area sec_pad">
             <div className="container">
@@ -35,18 +70,34 @@ const ServiceDetails = ({ title }) => {
                                 background: "#C4EDE3",
                             }}
                         >
-                            <form className="quote_form" action="">
+                            <form
+                                className="quote_form"
+                                onSubmit={sendEmail}
+                                ref={form}
+                            >
                                 <div className="row">
+                                    {status?.type === "success" && (
+                                        <p className="alert alert-success">
+                                            Message Send Successfully
+                                        </p>
+                                    )}
+                                    {status?.type === "error" && (
+                                        <p className="alert alert-danger">
+                                            Message Not Sent
+                                        </p>
+                                    )}
                                     <div className="form-group col-md-6 text_box">
                                         <input
                                             type="text"
                                             class="form-control"
                                             id="name"
+                                            name="name"
                                             placeholder="Your Name"
                                             required
                                             style={{
                                                 border: "1px solid #C4EDE3",
                                             }}
+                                            ref={name}
                                         />
                                     </div>
                                     <div className="col-md-6 text_box">
@@ -54,11 +105,13 @@ const ServiceDetails = ({ title }) => {
                                             type="email"
                                             class="form-control"
                                             id="email"
+                                            name="email"
                                             placeholder="Your Email"
                                             required
                                             style={{
                                                 border: "1px solid #C4EDE3",
                                             }}
+                                            ref={email}
                                         />
                                     </div>
                                     <div className="form-group col-md-6 text_box">
@@ -66,48 +119,56 @@ const ServiceDetails = ({ title }) => {
                                             type="text"
                                             class="form-control"
                                             id="name"
+                                            name="phone_number"
                                             placeholder="Your Phone Number"
                                             required
                                             style={{
                                                 border: "1px solid #C4EDE3",
                                             }}
+                                            ref={phone_number}
                                         />
                                     </div>
                                     <div className="col-md-6 text_box">
                                         <input
-                                            type="email"
+                                            type="text"
                                             class="form-control"
-                                            id="email"
+                                            id="make-model"
+                                            name="make"
                                             placeholder="Your Make Model"
                                             required
                                             style={{
                                                 border: "1px solid #C4EDE3",
                                             }}
+                                            ref={make}
                                         />
                                     </div>
                                     <div className="form-group col-md-12 text_box">
                                         <input
                                             type="text"
                                             class="form-control"
-                                            id="name"
+                                            id="sub-urb"
+                                            name="sub_urb"
                                             placeholder="Your Sub Urb"
                                             required
                                             style={{
                                                 border: "1px solid #C4EDE3",
                                             }}
+                                            ref={sub_urb}
                                         />
                                     </div>
                                     <div className="form-group col-md-12 text_box">
                                         <textarea
                                             type="text"
                                             class="form-control message"
-                                            id="name"
+                                            id="message"
+                                            name="message"
                                             placeholder="Your Message"
                                             required
                                             rows="1"
                                             style={{
                                                 border: "1px solid #C4EDE3",
                                             }}
+                                            ref={message}
                                         />
                                     </div>
                                 </div>

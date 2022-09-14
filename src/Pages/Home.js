@@ -23,10 +23,6 @@ export const Home = () => (
                 name="keywords"
                 content="Cash for Used Cars, Cash for Junk Cars, Car Wrecker Near You"
             />
-            <meta
-                name="google-site-verification"
-                content="E-AwgVdm3Xq7sIYatcf_8q6BTDnxpsMP21Z9fqS4tf4"
-            />
         </Helmet>
 
         <CustomNavbar cClass="custom_container p0" hbtnClass="new_btn" />
