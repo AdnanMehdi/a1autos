@@ -38,6 +38,7 @@ import SignUp from "./Pages/SignUp";
 import BlogGridPage from "./Pages/BlogGridPage";
 import BlogGridPage2 from "./Pages/BlogGridPage2";
 import BlogGridPage3 from "./Pages/BlogGridPage3";
+import BlogGridPage4 from "./Pages/BlogGridPage4";
 import NotFound from "./Pages/404";
 import { HomeAcacia } from "./Pages/HomeAcacia";
 
@@ -149,6 +150,10 @@ class App extends Component {
                     <ScrollToTopRoute
                         path="/blog-posts/3"
                         component={BlogGridPage3}
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/4"
+                        component={BlogGridPage4}
                     />
                     <ScrollToTopRoute path="/Contact" component={Contact} />
                     {/* <ScrollToTopRoute path="/Landing" component={Landing} />

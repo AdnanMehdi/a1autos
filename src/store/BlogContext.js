@@ -19,7 +19,7 @@ export const BlogContextProvider = (props) => {
     const [blogImage, setBlogImage] = useState("");
 
     const blogHandler = (title, desc, date, body, imgPath) => {
-        console.log("Handle Title");
+        // console.log("Handle Title");
         setBlogTitle(title);
         setBlogDescription(desc);
         setBlogDate(date);

@@ -52,6 +52,14 @@ const BlogGrid = ({ BlogData }) => {
                                     3
                                 </Link>
                             </li>
+                            <li>
+                                <Link
+                                    to="/blog-posts/4"
+                                    className="page-numbers"
+                                >
+                                    4
+                                </Link>
+                            </li>
                             {/* <li>
                                 <a className="next page-numbers" href=".#">
                                     <i className="ti-arrow-right"></i>

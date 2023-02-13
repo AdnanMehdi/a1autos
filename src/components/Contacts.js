@@ -159,7 +159,7 @@ function Contacts() {
                             </h6>
                             <p className="f_400 f_size_15">
                                 <span className="f_400 t_color3">Phone:</span>
-                                <a href="tel:0477003385">0477 003 385</a>
+                                <a href="tel:0448434141">0448 434 141</a>
                             </p>
                             {/* <p className="f_400 f_size_15"><span className="f_400 t_color3">Fax:</span> <a href="tel:3024437488">(+096) 204 353 6684</a></p> */}
                             <p className="f_400 f_size_15">

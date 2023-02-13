@@ -24,9 +24,9 @@ class Footer extends Component {
                                                 <h3 className="f-title f_600 t_color f_size_18">
                                                     {widget.title}
                                                 </h3>
-                                                <a href="tel:0477003385">
+                                                <a href="tel:0448434141">
                                                     <button className="btn btn_get btn_get_two">
-                                                        0477 003 385
+                                                        0448 434 141
                                                     </button>
                                                 </a>
                                                 {/* <p>{widget.description}</p> */}

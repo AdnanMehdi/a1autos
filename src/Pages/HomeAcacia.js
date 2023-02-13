@@ -15,60 +15,62 @@ export const HomeAcacia = ({ match }) => {
     let metaKeywords = "";
 
     if (match.path == "/Acacia-Ridge") {
-        title = "Cash for Used Cars in Acacia Ridge";
+        title = "Cash For Cars in Acacia Ridge - Junk Car Removal Acacia Ridge";
         metaDescription =
-            "A point comes when we all get tired by driving the same car for years. If you are looking to sell your used car for cash, call us. We will help you in buying your desired car by paying top money for cars without worrying about the condition of your vehicle.";
-        metaKeywords = "Cash for Used Cars in Acacia Ridge";
+            "We have the means to pay the highest cash for cars Acacia Ridge.  Get Top Junk Car Removal Acacia Ridge";
+        metaKeywords =
+            "Cash For Cars in Acacia Ridge, Junk Car Removal Acacia Ridge";
     } else if (match.path == "/Brisbane") {
-        title = "Cash for Damaged Cars Brisbane";
+        title = "Cash for Cars in brisbane - Junk Car Removal brisbane";
         metaDescription =
-            "There are plenty of parts in a car that at the least still holds some worth and can be utilized in any other vehicle. In case the vehicle is not too old but is damaged by any crash, it is quite hard to sell it to a prospective customer.";
-        metaKeywords = "Cash for Damaged Cars Brisbane";
+            "Get cash for cars Brisbane faster than ever. We have Junk Car Removal in Brisbane";
+        metaKeywords = "Cash for Cars in Brisbane, Junk Car Removal brisbane";
     } else if (match.path == "/Beenleigh") {
-        title = "Cash for Damaged Cars in Beeneleigh";
+        title = "Cash for Cars in Beeneleigh - Junk Car Removal Beeneleigh";
         metaDescription =
-            "Our Cash For damaged Cars Beenleigh service will give you instant cash for car. There are plenty of parts in a car that at the least still holds some worth and can be utilized in any other vehicle. In case the vehicle is not too old but is damaged by any crash, it is quite hard to sell it to a prospective customer.";
-        metaKeywords = "Cash for Damaged Cars Beeneleigh";
+            "Our Cash For Cars Beenleigh service will give you instant cash for Junk Car Removal Beeneleigh";
+        metaKeywords = "Cash for Cars in Beeneleigh";
     } else if (match.path == "/Coopers-Plains") {
-        title = "Scrap Removal Car in Coopers Plains";
+        title =
+            "Cash for Cars in Coopers Plains - Junk Car Removal Coopers Plains";
         metaDescription =
-            "Scrap car removal services with car recycling can keep the environment safe from harmful emissions released by an old, unusable automobile";
-        metaKeywords = "Scrap Removal Car in Coopers Plains";
+            "Cash for Cars in Coopers Plains services Junk Car Removal with car recycling.";
+        metaKeywords = "Cash for Cars in Coopers Plains";
     } else if (match.path == "/Gold-Coast") {
-        title = "Car Wrecker Near You in Gold Coast";
+        title = "Cash for Cars in Gold Cast - Junk Car Removal in Gold Coast";
         metaDescription =
-            "Auto Car wrecking Gold Coast is all that you need. Adrian's is the top choice for auto selling cars and buying parts in Gold Coast.";
-        metaKeywords = "Car Wrecker Near You in Gold Coast";
+            "Cash for Cars in Gold Cast is all that you need. Adrian's is the top choice for auto selling cars and buying parts in Gold Coast. Junk Car Removal in Gold Coast";
+        metaKeywords = "Cash for Cars in Gold Cast";
     } else if (match.path == "/Ipswich") {
-        title = "Scrap Removal Car in Ipswich";
+        title = "Cash for Cars in Ipswich - Junk Car Removal Ipswich";
         metaDescription =
-            "Looking to Scrap Your Car in Ipswich, scrappage service and pay top prices for your old scrap vehicle.";
-        metaKeywords = "Scrap Removal Car in Ipswich";
+            "Looking to Cash for Cars in Ipswich, Junk Car Removal Ipswich and pay top prices for your old scrap vehicle.";
+        metaKeywords = "Cash for Cars in Ipswich";
     } else if (match.path == "/Rocklea") {
-        title = "Unwanted Car Buyer in Rocklea";
+        title = "Cash for Cars in Rocklea - Junk Car Removal Rocklea";
         metaDescription =
-            "Unwanted Car Buyer in Rocklea We provide you the great and easy way to turn your scrap car into cash for cars.";
-        metaKeywords = "Unwanted Car Buyer in Rocklea";
+            "Cash for Cars in Rocklea We provide you the great and easy way to turn your scrap car into cash for cars. Junk Car Removal Rocklea";
+        metaKeywords = "Cash for Cars in Rocklea";
     } else if (match.path == "/Sunnybank") {
-        title = "Unwanted Car Buyer in Sunnybank";
+        title = "Cash for Cars in Sunnybank - Junk Car Removal Sunnybank";
         metaDescription =
-            "We are a scrap car removal service provider that not only accepts and remove old and unwanted cars, but we also purchase vans, 4*4, SUVs, Ute's, trucks, and other types of commercial vehicles.";
-        metaKeywords = "Unwanted Car Buyer in Sunnybank";
+            "We are a Cash for Cars in Sunnybank service provider that not only accepts and remove old and Junk Car Removal Sunnybank";
+        metaKeywords = "Cash for Cars in Sunnybank";
     } else if (match.path == "/Toowoomba") {
-        title = "Scrap Removal Car in Toowoomba";
+        title = "Cash for Cars in Toowoomba - Junk Car Removal Toowoomba  ";
         metaDescription =
-            "Get free and instant cash for scrap cars. Efficient, hassle-free truck and scrap car removal. Professional and Prompt Service.";
-        metaKeywords = "Scrap Removal Car in Toowoomba";
+            "Cash for Cars in Toowoomba. Efficient, hassle-free truck and scrap car removal. Professional and Prompt Service.";
+        metaKeywords = "Cash for Cars in Toowoomba";
     } else if (match.path == "/Underwood") {
-        title = "Unwanted Car Buyer in Underwood";
+        title = "Cash for Cars in Underwood - Junk Car Removal Underwood";
         metaDescription =
             "Unwanted Car Buyer in Underwood. Efficient, hassle-free truck and scrap car removal. Professional and Prompt Service.";
-        metaKeywords = "Cash for Damaged Cars Beeneleigh";
+        metaKeywords = "Cash for Cars in Underwood, Junk Car Removal Underwood";
     } else if (match.path == "/Woodridge") {
-        title = "Scrap Removal Car in Woodridge";
+        title = "Cash for Cars in Woodridge - Junk Car Removal Woodridge";
         metaDescription =
-            "Our Cash For damaged Cars Woodridge service will give you instant cash for car. There are plenty of parts in a car that at the least still holds some worth and can be utilized in any other vehicle. In case the vehicle is not too old but is damaged by any crash, it is quite hard to sell it to a prospective customer.";
-        metaKeywords = "Scrap Removal Car in Woodridge";
+            "Unwanted Car Buyer in Underwood. Efficient, hassle-free truck and scrap car removal. Professional and Prompt Service.";
+        metaKeywords = "Cash for Cars in Woodridge";
     }
 
     return (

@@ -465,12 +465,12 @@ function CustomNavbar({ mClass, nClass, cClass, slogo, hbtnClass }) {
                                 </li>
                             </ul>
                             <div>
-                                <a href="tel:0477003385" id="call-btn-nav">
+                                <a href="tel:0448434141" id="call-btn-nav">
                                     <button
                                         className={`btn btn_get btn_hover ${hbtnClass} mb-2 mb-md-0`}
                                         style={{ border: "3px solid #5E2CED" }}
                                     >
-                                        0477 003 385
+                                        0448 434 141
                                     </button>
                                 </a>
                             </div>

@@ -169,11 +169,11 @@ const DesignBanner = () => {
                                     <div className="embed-responsive embed-responsive-4by3">
                                         <video
                                             src={require(`../../video/a1-auto-${videoLocation}.mp4`)}
-                                            autoPlay="true"
+                                            autoPlay
                                             loop
                                             muted
-                                            defaultmuted
-                                            playsinline
+                                            defaultMuted
+                                            playsInline
                                             className="embed-responsive-item"
                                             style={{
                                                 filter: "brightness(100%)",
@@ -207,7 +207,7 @@ const DesignBanner = () => {
                                         </p>
                                     )}
                                     <div className="row">
-                                        <div className="form-group col-6 text_box">
+                                        <div className="form-group col-12 text_box">
                                             <input
                                                 type="text"
                                                 class="form-control"
@@ -218,7 +218,7 @@ const DesignBanner = () => {
                                                 ref={name}
                                             />
                                         </div>
-                                        <div className="col-6 text_box">
+                                        <div className="col-12 text_box">
                                             <input
                                                 type="email"
                                                 class="form-control"
@@ -240,26 +240,26 @@ const DesignBanner = () => {
                                                 ref={phone_number}
                                             />
                                         </div>
-                                        <div className="col-6 text_box">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                id="make-model"
-                                                name="make"
-                                                placeholder="Your Make Model"
-                                                required
-                                                ref={make}
-                                            />
-                                        </div>
-                                        <div className="form-group col-md-12 text_box">
+                                        <div className="form-group col-6 text_box">
                                             <input
                                                 type="text"
                                                 class="form-control"
                                                 id="sub-urb"
                                                 name="sub_urb"
-                                                placeholder="Your Sub Urb"
+                                                placeholder="Your Suburb"
                                                 required
                                                 ref={sub_urb}
+                                            />
+                                        </div>
+                                        <div className="col-12 text_box">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="make-model"
+                                                name="make"
+                                                placeholder="Year Make Model"
+                                                required
+                                                ref={make}
                                             />
                                         </div>
                                         <div className="form-group col-md-12 text_box">

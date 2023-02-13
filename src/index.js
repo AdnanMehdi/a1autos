@@ -35,12 +35,12 @@ setTimeout(
             <LocationProvider>
                 <BlogContextProvider>
                     <ServiceProvider>
-                        <a href="tel:0477003385" id="call-now-btn">
+                        <a href="tel:0448434141" id="call-now-btn">
                             <button
                                 style={{ border: "3px solid #5e2ced" }}
                                 className="btn btn_get btn_get_two"
                             >
-                                Call Now: 0477 003 385
+                                Call Now: 0448 434 141
                             </button>
                         </a>
                         <App hideLoader={hideLoader} showLoader={showLoader} />,

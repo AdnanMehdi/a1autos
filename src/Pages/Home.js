@@ -13,11 +13,11 @@ export const Home = () => (
     <div className="body_wrapper">
         <Helmet>
             <title>
-                Cash for Used Cars – Cash for Junk Cars - Car Wrecker Near You
+                Cash for Used Cars - Cash for Junk Cars - Car Wrecker Near You
             </title>
             <meta
                 name="description"
-                content="Selling your old car won’t be as stress-free as you are might thinking. If you are wondering where to sell my car or junk cars for cash, you are accessing the right site"
+                content="Selling your old car won't be as stress-free as you are might thinking. If you are wondering where to sell my car or junk cars for cash, you are accessing the right site"
             />
             <meta
                 name="keywords"

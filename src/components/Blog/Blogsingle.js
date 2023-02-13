@@ -21,7 +21,7 @@ const Bloglists = () => {
                             <div className="blog_content">
                                 <div className="post_date">
                                     <h2>
-                                        {date.getDate()}{" "}
+                                        {date.getDate()}
                                         <span>
                                             {date.toLocaleDateString(
                                                 "default",

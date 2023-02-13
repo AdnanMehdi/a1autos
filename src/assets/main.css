@@ -13447,6 +13447,8 @@ button:focus {
 .quote_form .text_box input[type="email"] {
     padding-left: 15px;
     height: 48px;
+    line-height: 48px;
+    font-size: 14px;
 }
 
 .text_box .message {

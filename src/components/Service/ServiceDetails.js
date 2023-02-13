@@ -86,7 +86,7 @@ const ServiceDetails = ({ title }) => {
                                             Message Not Sent
                                         </p>
                                     )}
-                                    <div className="form-group col-md-6 text_box">
+                                    <div className="form-group col-12 text_box">
                                         <input
                                             type="text"
                                             class="form-control"
@@ -100,7 +100,7 @@ const ServiceDetails = ({ title }) => {
                                             ref={name}
                                         />
                                     </div>
-                                    <div className="col-md-6 text_box">
+                                    <div className="col-12 text_box">
                                         <input
                                             type="email"
                                             class="form-control"
@@ -114,7 +114,7 @@ const ServiceDetails = ({ title }) => {
                                             ref={email}
                                         />
                                     </div>
-                                    <div className="form-group col-md-6 text_box">
+                                    <div className="form-group col-6 text_box">
                                         <input
                                             type="text"
                                             class="form-control"
@@ -128,32 +128,32 @@ const ServiceDetails = ({ title }) => {
                                             ref={phone_number}
                                         />
                                     </div>
-                                    <div className="col-md-6 text_box">
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="make-model"
-                                            name="make"
-                                            placeholder="Your Make Model"
-                                            required
-                                            style={{
-                                                border: "1px solid #C4EDE3",
-                                            }}
-                                            ref={make}
-                                        />
-                                    </div>
-                                    <div className="form-group col-md-12 text_box">
+                                    <div className="form-group col-6 text_box">
                                         <input
                                             type="text"
                                             class="form-control"
                                             id="sub-urb"
                                             name="sub_urb"
-                                            placeholder="Your Sub Urb"
+                                            placeholder="Your Suburb"
                                             required
                                             style={{
                                                 border: "1px solid #C4EDE3",
                                             }}
                                             ref={sub_urb}
+                                        />
+                                    </div>
+                                    <div className="col-12 text_box">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="make-model"
+                                            name="make"
+                                            placeholder="Year Make Model"
+                                            required
+                                            style={{
+                                                border: "1px solid #C4EDE3",
+                                            }}
+                                            ref={make}
                                         />
                                     </div>
                                     <div className="form-group col-md-12 text_box">

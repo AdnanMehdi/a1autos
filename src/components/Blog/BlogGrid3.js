@@ -11,7 +11,7 @@ const BlogGrid3 = ({ BlogData }) => {
                 <div className="row">
                     <div className="col-lg-8 blog_grid_info">
                         <div className="row">
-                            {BlogData.Blogs.slice(20, 29).map((blog) => {
+                            {BlogData.Blogs.slice(20, 30).map((blog) => {
                                 return (
                                     <BlogGridItem
                                         date={blog.date}
@@ -52,6 +52,15 @@ const BlogGrid3 = ({ BlogData }) => {
                                     3
                                 </span>
                             </li>
+                            <li>
+                                <Link
+                                    to="/blog-posts/4"
+                                    className="page-numbers"
+                                >
+                                    4
+                                </Link>
+                            </li>
+
                             {/* <li>
                                 <a className="next page-numbers" href=".#">
                                     <i className="ti-arrow-right"></i>
