@@ -11,7 +11,7 @@ const BlogGrid4 = ({ BlogData }) => {
                 <div className="row">
                     <div className="col-lg-8 blog_grid_info">
                         <div className="row">
-                            {BlogData.Blogs.slice(30, 35).map((blog) => {
+                            {BlogData.Blogs.slice(30, 36).map((blog) => {
                                 return (
                                     <BlogGridItem
                                         date={blog.date}
