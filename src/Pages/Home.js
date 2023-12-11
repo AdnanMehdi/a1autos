@@ -23,13 +23,14 @@ export const Home = () => (
                 name="keywords"
                 content="Cash for Used Cars, Cash for Junk Cars, Car Wrecker Near You"
             />
+            <link rel="canonical" href="https://a1autorecycler.com.au/" />
         </Helmet>
 
         <CustomNavbar cClass="custom_container p0" hbtnClass="new_btn" />
         {/* <CustomNavbar cClass="custom_container p0" hbtnClass="new_btn" nClass="ml-auto mr-auto" /> */}
         <DesignBanner />
         <HomeProcess />
-        <Service ServiceData={ServiceData} />
+        <Service ServiceData={ServiceData} /> 
         <Subscribe FooterData={FooterData} />
         <Footer FooterData={FooterData} />
     </div>

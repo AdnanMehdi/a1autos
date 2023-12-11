@@ -41,6 +41,12 @@ import BlogGridPage3 from "./Pages/BlogGridPage3";
 import BlogGridPage4 from "./Pages/BlogGridPage4";
 import NotFound from "./Pages/404";
 import { HomeAcacia } from "./Pages/HomeAcacia";
+import { Helmet } from "react-helmet"
+import BlogGridPage5 from "./Pages/BlogGridPage5";
+import BlogGridPage6 from "./Pages/BlogGridPage6";
+import BlogGridPage7 from "./Pages/BlogGridPage7";
+import BlogGridPage8 from "./Pages/BlogGridPage8"
+
 
 class App extends Component {
     componentDidMount() {
@@ -50,58 +56,79 @@ class App extends Component {
         return (
             <Router>
                 <Switch>
+                    
                     <ScrollToTopRoute
                         exact={true}
                         path={"/"}
                         component={Home}
                     />
+                    
                     <ScrollToTopRoute
                         path={"/Acacia-Ridge"}
                         component={HomeAcacia}
+                        
                     />
+                    
                     <ScrollToTopRoute
                         path={"/Brisbane"}
                         component={HomeAcacia}
+                        
                     />
+                    
                     <ScrollToTopRoute
                         path={"/Beenleigh"}
                         component={HomeAcacia}
+                        
                     />
+                    
                     <ScrollToTopRoute
                         path={"/Coopers-Plains"}
                         component={HomeAcacia}
+                        
                     />
+                    
                     <ScrollToTopRoute
                         path={"/Gold-Coast"}
                         component={HomeAcacia}
                     />
+                    
                     <ScrollToTopRoute
                         path={"/Ipswich"}
                         component={HomeAcacia}
+                        
                     />
+                    
                     <ScrollToTopRoute
                         path={"/Rocklea"}
                         component={HomeAcacia}
+                        
                     />
+                    
                     <ScrollToTopRoute
                         path={"/Sunnybank"}
                         component={HomeAcacia}
+                        rel="canonical"
                     />
+                    
                     <ScrollToTopRoute
                         path={"/Toowoomba"}
                         component={HomeAcacia}
+                        
                     />
                     <ScrollToTopRoute
                         path={"/Underwood"}
                         component={HomeAcacia}
+                        
                     />
                     <ScrollToTopRoute
                         path={"/Woodridge"}
                         component={HomeAcacia}
+                        
                     />
                     <ScrollToTopRoute
                         path="/Digital-marketing"
                         component={DigitalMarketing}
+                        
                     />
                     <ScrollToTopRoute
                         path="/Payment-processing"
@@ -115,9 +142,10 @@ class App extends Component {
                         path="/Service"
                         exact
                         component={Service}
+                        
                     />
                     <ScrollToTopRoute path="/Process" component={Process} />
-                    <ScrollToTopRoute path="/Team" component={Team} />
+                    <ScrollToTopRoute path="/Team" component={Team}  />
                     {/* <ScrollToTopRoute
                         path="/Portfolio-2col"
                         component={Portfolio2col}
@@ -129,6 +157,7 @@ class App extends Component {
                     <ScrollToTopRoute
                         path="/Portfolio-fullwidth-4col"
                         component={Portfoliofull4col}
+                        
                     />
                     {/* <ScrollToTopRoute
                         path="/PortfolioSingle"
@@ -138,10 +167,12 @@ class App extends Component {
                     <ScrollToTopRoute
                         path="/Blog/:blogTitle"
                         component={BlogSingle}
+                        
                     />
                     <ScrollToTopRoute
                         path="/blog-posts/1"
                         component={BlogGridPage}
+                        
                     />
                     <ScrollToTopRoute
                         path="/blog-posts/2"
@@ -150,10 +181,32 @@ class App extends Component {
                     <ScrollToTopRoute
                         path="/blog-posts/3"
                         component={BlogGridPage3}
+                        
                     />
                     <ScrollToTopRoute
                         path="/blog-posts/4"
                         component={BlogGridPage4}
+                        
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/5"
+                        component={BlogGridPage5}
+                        
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/6"
+                        component={BlogGridPage6}
+                        
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/7"
+                        component={BlogGridPage7}
+                        
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/8"
+                        component={BlogGridPage8}
+                        
                     />
                     <ScrollToTopRoute path="/Contact" component={Contact} />
                     {/* <ScrollToTopRoute path="/Landing" component={Landing} />
@@ -200,6 +253,7 @@ class App extends Component {
                     <ScrollToTopRoute
                         path="/service/:serviceName/:serviceImage"
                         component={ServiceDetails}
+                        
                     />
                     {/* <ScrollToTopRoute path="/SignIn" component={SignIn} />
                     <ScrollToTopRoute path="/SignUp" component={SignUp} /> */}
