@@ -4,14 +4,14 @@ import BlogGridItem from "./BlogGridItem";
 import ServiceData from "../Service/ServiceData";
 import { Link } from "react-router-dom";
 
-const BlogGrid7 = ({ BlogData }) => {
+const BlogGrid9 = ({ BlogData }) => {
     return (
         <section className="blog_area_two sec_pad">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 blog_grid_info">
                         <div className="row">
-                            {BlogData.Blogs.slice(60, 70).map((blog) => {
+                            {BlogData.Blogs.slice(70, 80).map((blog) => {
                                 return (
                                     <BlogGridItem
                                         date={blog.date}
@@ -78,16 +78,16 @@ const BlogGrid7 = ({ BlogData }) => {
                             </li>
                             <li>
                                 <span
-                                    aria-current="page"
-                                    className="page-numbers current"
+                                    aria-current="/blog-posts/7"
+                                    className="page-numbers"
                                 >
                                     7
                                 </span>
                             </li>
                             <li>
                                 <span
-                                    to="/blog-posts/8"
-                                    className="page-numbers"
+                                    aria-current="page"
+                                    className="page-numbers current"
                                 >
                                     8
                                 </span>
@@ -115,4 +115,4 @@ const BlogGrid7 = ({ BlogData }) => {
         </section>
     );
 };
-export default BlogGrid7;
+export default BlogGrid9;
