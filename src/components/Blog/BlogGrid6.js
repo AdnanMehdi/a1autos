@@ -77,20 +77,20 @@ const BlogGrid6 = ({ BlogData }) => {
                                 </span>
                             </li>
                             <li>
-                                <span
+                                <Link
                                     to="/blog-posts/7"
                                     className="page-numbers"
                                 >
                                     7
-                                </span>
+                                </Link>
                             </li>
                             <li>
-                                <span
+                                <Link
                                     to="/blog-posts/8"
                                     className="page-numbers"
                                 >
                                     8
-                                </span>
+                                </Link>
                             </li>
                             <li>
                                 <Link

@@ -46,6 +46,7 @@ import BlogGridPage5 from "./Pages/BlogGridPage5";
 import BlogGridPage6 from "./Pages/BlogGridPage6";
 import BlogGridPage7 from "./Pages/BlogGridPage7";
 import BlogGridPage8 from "./Pages/BlogGridPage8"
+import BlogGridPage9 from "./Pages/BlogGridPage9"
 
 
 class App extends Component {
@@ -206,6 +207,11 @@ class App extends Component {
                     <ScrollToTopRoute
                         path="/blog-posts/8"
                         component={BlogGridPage8}
+                        
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/9"
+                        component={BlogGridPage9}
                         
                     />
                     <ScrollToTopRoute path="/Contact" component={Contact} />
