@@ -4,14 +4,14 @@ import BlogGridItem from "./BlogGridItem";
 import ServiceData from "../Service/ServiceData";
 import { Link } from "react-router-dom";
 
-const BlogGrid4 = ({ BlogData }) => {
+const BlogGrid13 = ({ BlogData }) => {
     return (
         <section className="blog_area_two sec_pad">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-8 blog_grid_info">
                         <div className="row">
-                            {BlogData.Blogs.slice(30, 40).map((blog) => {
+                            {BlogData.Blogs.slice(120, 130).map((blog) => {
                                 return (
                                     <BlogGridItem
                                         date={blog.date}
@@ -53,12 +53,12 @@ const BlogGrid4 = ({ BlogData }) => {
                                 </Link>
                             </li>
                             <li>
-                                <span
-                                    aria-current="page"
-                                    className="page-numbers current"
+                                <Link
+                                    to="/blog-posts/4"
+                                    className="page-numbers"
                                 >
                                     4
-                                </span>
+                                </Link>
                             </li>
                             <li>
                                 <Link
@@ -125,12 +125,12 @@ const BlogGrid4 = ({ BlogData }) => {
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    to="/blog-posts/13"
-                                    className="page-numbers"
+                                <span
+                                    aria-current="page"
+                                    className="page-numbers current"
                                 >
                                     13
-                                </Link>
+                                </span>
                             </li>
                             {/* <li>
                                 <a className="next page-numbers" href=".#">
@@ -147,4 +147,4 @@ const BlogGrid4 = ({ BlogData }) => {
         </section>
     );
 };
-export default BlogGrid4;
+export default BlogGrid13;

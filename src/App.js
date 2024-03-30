@@ -47,6 +47,10 @@ import BlogGridPage6 from "./Pages/BlogGridPage6";
 import BlogGridPage7 from "./Pages/BlogGridPage7";
 import BlogGridPage8 from "./Pages/BlogGridPage8"
 import BlogGridPage9 from "./Pages/BlogGridPage9"
+import BlogGridPage10 from "./Pages/BlogGridPage10"
+import BlogGridPage11 from "./Pages/BlogGridPage11"
+import BlogGridPage12 from "./Pages/BlogGridPage12"
+import BlogGridPage13 from "./Pages/BlogGridPage13";
 
 
 class App extends Component {
@@ -212,6 +216,26 @@ class App extends Component {
                     <ScrollToTopRoute
                         path="/blog-posts/9"
                         component={BlogGridPage9}
+                        
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/10"
+                        component={BlogGridPage10}
+                        
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/11"
+                        component={BlogGridPage11}
+                        
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/12"
+                        component={BlogGridPage12}
+                        
+                    />
+                    <ScrollToTopRoute
+                        path="/blog-posts/13"
+                        component={BlogGridPage13}
                         
                     />
                     <ScrollToTopRoute path="/Contact" component={Contact} />

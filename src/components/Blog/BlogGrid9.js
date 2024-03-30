@@ -77,12 +77,12 @@ const BlogGrid9 = ({ BlogData }) => {
                                 </Link>
                             </li>
                             <li>
-                                <span
+                                <Link
                                     aria-current="/blog-posts/7"
                                     className="page-numbers"
                                 >
                                     7
-                                </span>
+                                </Link>
                             </li>
                             <li>
                                 <Link
@@ -99,6 +99,38 @@ const BlogGrid9 = ({ BlogData }) => {
                                 >
                                     9
                                 </span>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/blog-posts/10"
+                                    className="page-numbers"
+                                >
+                                    10
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/blog-posts/11"
+                                    className="page-numbers"
+                                >
+                                    11
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/blog-posts/12"
+                                    className="page-numbers"
+                                >
+                                    12
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/blog-posts/13"
+                                    className="page-numbers"
+                                >
+                                    13
+                                </Link>
                             </li>
                             {/* <li>
                                 <a className="next page-numbers" href=".#">

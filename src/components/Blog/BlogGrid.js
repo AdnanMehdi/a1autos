@@ -100,6 +100,38 @@ const BlogGrid = ({ BlogData }) => {
                                     9
                                 </Link>
                             </li>
+                            <li>
+                                <Link
+                                    to="/blog-posts/10"
+                                    className="page-numbers"
+                                >
+                                    10
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/blog-posts/11"
+                                    className="page-numbers"
+                                >
+                                    11
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/blog-posts/12"
+                                    className="page-numbers"
+                                >
+                                    12
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    to="/blog-posts/13"
+                                    className="page-numbers"
+                                >
+                                    13
+                                </Link>
+                            </li>
                             {/* <li>
                                 <a className="next page-numbers" href=".#">
                                     <i className="ti-arrow-right"></i>
